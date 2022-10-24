@@ -1,13 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  font-family: "Poppins";
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+i {
+  cursor: pointer;
+}
+
+.fa-trash:hover {
+  color: red;
+  animation: rotate 0.5s infinite alternate ease-in-out;
+}
+
+.fa-pen-to-square:hover {
+  color: green;
+  animation: rotate 0.5s infinite alternate ease-in-out;
+}
+
+textarea:focus,
+textarea.form-control:focus,
+input.form-control:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+[type="text"].form-control:focus,
+[type="password"].form-control:focus,
+[type="email"].form-control:focus,
+[type="tel"].form-control:focus,
+[contenteditable].form-control:focus {
+  box-shadow: inset 0 -1px 0 #ddd;
+  outline: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+.form-label:active ~ .form-control {
+  border: 1px solid orange;
+}
+
+.form-control {
+  border: none;
+  background: none;
+  border-bottom: 0.15em solid grey;
+  border-radius: 0;
+}
+
+.form-control:active,
+.form-control:focus {
+  border: none;
+  background: none;
+  animation: blink 0.4s infinite alternate ease-in-out;
+}
+
+.nav-profile-logo {
+  display: flex;
+  width: height;
+  background-color: white;
+  color: black;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.details-con {
+  border: 3px orange solid;
+  height: 50%;
+  padding: 5rem;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.fa-door-open {
+  font-size: 0;
+  color: white;
+  transition: font-size 0.5s;
+}
+
+.btn-dark:hover {
+  background: rgb(255, 165, 0);
+  border-color: rgb(255, 165, 0);
+}
+
+.sign-in-btn:hover .fa-door-open {
+  font-size: 1rem;
+}
+
+.sign-in-input-con {
+  display: flex;
+  justify-content: center;
+}
+
+.sign-in-input {
+  width: 40%;
+  transition: width 0.5s;
+}
+
+.sign-in-input:focus {
+  width: 70%;
+}
+
+.add-note-input {
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.add-note-input:focus {
+  border: 1px solid orange;
+  animation: none;
+}
+
+.log-in-sign-up-a {
+  text-decoration: none;
+  color: orange;
+}
+
+.log-in-sign-up-a:hover {
+  text-decoration: underline;
+  color: orange;
+  font-weight: bold;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes blink {
+  0% {
+    border-bottom: 0.15em solid orange;
+  }
+  50% {
+    border-bottom: 0.15em solid rgb(255, 165, 0, 0.5);
+  }
+  100% {
+    border-bottom: 0.15em solid rgb(255, 165, 0, 0);
+  }
+}
+
+/* typewriter */
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
 }
